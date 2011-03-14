@@ -1,0 +1,11 @@
+#
+# tcsh completion for Mercurial
+#
+# Copyright (c) 1992-2011 Zhihao Yuan. All rights reserved.
+# This file is distributed under the 2-clause BSD License.
+
+complete mymnt.sh	'c/-/(r D a l h L p o)/' \
+	'n@-L@`ls /usr/share/locale`@' 'n/-p/d/' 'n/-o/x:<options>/' \
+	'n/*/`mymnt.sh -l`/'
+complete umymnt.sh	'c/-/(a D l h p)/' 'n/-p/d/' 'n/*/`umymnt.sh -l`/'
+
