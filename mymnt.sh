@@ -157,7 +157,7 @@ while getopts 'p:L:o:raDlh' flag; do
 		D)
 			DEBUG=1 ;;
 		l)
-			glabel status -s | awk '{sub(/[^\/]*\//,"");split($0,a,/[[:space:]]*N\/A[[:space:]]+/);print a[1]}'
+			glabel status -s | awk '{if(!match($0,/^[[:space:]]*gpt/)){sub(/[^\/]*\//,"");split($0,a,/[[:space:]]*N\/A[[:space:]]+/);print a[1]}}'
 			exit ;;
 		h)
 			help
