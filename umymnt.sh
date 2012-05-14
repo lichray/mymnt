@@ -68,7 +68,7 @@ if [ "$device" != "/dev/$1" -a -d "$MNTBASE/$1" ]; then
 else
 	node="$MNTBASE/$(labelof $(basename "$device"))"
 fi
-issue rmdir -p "$node" 2> /dev/null
+issue rmdir "$node" 2> /dev/null
 exit $st
 
 }
